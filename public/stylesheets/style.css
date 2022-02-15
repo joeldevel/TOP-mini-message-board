@@ -1,8 +1,76 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+header {
+    background: #999;
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* form */
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.post-message-form {
+    border: 2px solid #123;
+    padding: 20px;
+}
+
+.post-message-form textarea {
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+/* buttons */
+.button {
+    width: 100%;
+    padding: 10px;
+}
+
+.post-a-message {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid plum;
+    margin: 20px;
+    text-decoration: none;
+    background: #123;
+}
+
+/* render messages */
+.messages-list {
+    margin: 10px;
+    list-style: none;
+}
+
+.message-card {
+    border-bottom: 1px solid #321;
+    margin-bottom: 10px;
+    padding: 10px;
 }

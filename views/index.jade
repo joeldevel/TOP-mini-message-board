@@ -1,9 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/new") post a message!
-  ul
+    header
+        h1= title
+        p Welcome to #{title}
+    a(href="/new").post-a-message post a message!
+    ul.messages-list
       each val in messages
-          li= `${val.text} ${val.user} ${val.added}`
+          li
+              div.message-card
+                  h2= `${val.user} wrote`
+                  p= `${val.text}`
+                  p= `${val.added.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})}`
