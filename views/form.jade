@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Send your message
+  form(method="post" action="/new")
+      label(for="messageText") Your message
+      input(type="text" name="messageText" id="messageText" required)
+      label(for="user") Your username
+      input(type="text" name="user" id="user" required)
+      input(type="submit" value="send your message")
